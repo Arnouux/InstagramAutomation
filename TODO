@@ -1,0 +1,67 @@
+Content:
+    ☐ Pick ~50 accounts from where to scrap content
+    Classify content as good/bad:
+        Focus on precision, not recall
+        Hard-coded rules:
+            Can be strict on them, the content is abundant
+            These are exclusive rules i.e. if at least one is fulfilled, the image can be trashed
+            ☐ Keywords in caption: "link in bio", "limited time", "sponsored", ...
+                Try to do a list most exhaustive possible by manually checking sponsored content
+            ☐ Disabled comments
+            ☐ More than one person tagged in the picture
+            ☐ Only pictures?
+        ML:
+            Inputs
+                Vectorized caption
+                Nbr of mentions
+                Nbr of hashtags
+                Caption length
+                Was the caption edited from original?
+                Views / subscribers / days since post
+                Likes / subscribers / days since post
+                Comments / subscribers / days since post
+            Logistic Regression
+            Output
+                Post rating ∈ [0, 1]
+            Strict threshold (0.9?)
+            ☐ Populate a training folder manually
+            ☐ Vectorization of caption
+            ☐ Build model
+            ☐ Train model
+Auto-captioning & auto-crediting:
+    This template?
+        {CAPTION}
+        .
+        .
+        .
+        Credit {CREDIT}
+        .
+        .
+        .
+        {HASHTAG1, ..., HASHTAG30}
+    Captions:
+        ☐ Create ~100 generic captions
+            Quotes about Paris
+            Broad questions
+            Basic praise
+            e.g     
+                Who can name this spot?"
+                Tell us your favorite bar in NYC in the comments!
+                "You haven't lived until you've died in New York"
+    Credit:
+        ☐ Credit the account where the photo was taken from
+        ☐ Get credit from caption
+            Keywords
+        ☐ Get credit from tagged accounts in picture
+    Hashtags:
+        ☐ Collection of ~100 #s related to Paris
+        ☐ Generate random set of #s each time
+Interactions:
+    MAXIMUM OF FOLLOW/UNFOLLOW TO RESPECT!!!! (~400 follows/400 unfollows)
+    Follow:
+        ☐ Random follow from those already following the 50 big accounts
+        ☐ ML, check article more thoroughly
+    Likes:
+        ☐ Automated liking of #s, accounts
+Auto-sales:
+    ☐ Might want to make the rest work before that
